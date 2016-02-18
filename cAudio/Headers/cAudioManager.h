@@ -87,6 +87,12 @@ namespace cAudio
 
         virtual cAudioMutex *getMutex() { return &Mutex; }
 
+	//! returns a pointer to the used OpenAL context.  Useful for sharing/reusing them.
+	ALCcontext* getOpenALContext() const { return Context; }
+
+	//! returns a pointer to the used OpenAL device.  Useful for sharing/reusing them.
+	ALCdevice* getOpenALDevice() const { return Device; }
+
 	protected:
 		virtual void run();
 
