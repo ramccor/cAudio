@@ -36,6 +36,8 @@ namespace cAudio
         cAudioSourceBase(IAudioDeviceContext* context);
         virtual ~cAudioSourceBase();
 
+	virtual AudioFormats getFormat() const;
+
 		virtual bool isPlaying() const;
 		virtual bool isPaused() const;
 		virtual bool isStopped() const;

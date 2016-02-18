@@ -125,6 +125,11 @@ namespace cAudio
         }
     }
 
+    AudioFormats cAudioSource::getFormat() const
+    {
+    	return Decoder->getFormat();
+    }
+
     cAudioSourceBase::cAudioSourceBase(IAudioDeviceContext* context) : 
         Context(context), Volume(1.f), Source(0) 
     {
